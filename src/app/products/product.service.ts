@@ -1,6 +1,10 @@
 import { faker } from '@faker-js/faker';
 import { Product } from './product.Model';
-import { CreateProductDto, UpdateProductDto } from './product.dto';
+import {
+  CreateProductDto,
+  UpdateProductDto,
+  FindProducts,
+} from './product.dto';
 
 export const products: Product[] = [];
 
@@ -33,4 +37,11 @@ export const updateProduct = (
     createdAt: faker.date.recent(),
   };
   return products[index];
+};
+
+export const findProducts = (dto: FindProducts): Product[] => {
+  // dto.color = 'blue'
+  // code
+
+  return products;
 };
