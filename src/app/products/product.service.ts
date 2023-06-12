@@ -1,7 +1,11 @@
-import { Product } from "./product.Model"
+import { Product } from './product.Model';
 
-export const products: Product[] = []
+export const products: Product[] = [];
 
 export const addProduct = (data: Product) => {
-  products.push(data)
-}
+  products.push(data);
+};
+
+export const updateProduct = (id: string, changes: Product) => {
+  // products.push(data)
+};
