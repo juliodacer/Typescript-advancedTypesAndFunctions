@@ -3,7 +3,7 @@ import { Product } from './product.Model';
 import {
   CreateProductDto,
   UpdateProductDto,
-  FindProducts,
+  FindProductsDto,
 } from './product.dto';
 
 export const products: Product[] = [];
@@ -39,9 +39,9 @@ export const updateProduct = (
   return products[index];
 };
 
-export const findProducts = (dto: FindProducts): Product[] => {
-  // dto.color = 'blue'
-  // code
+export const findProducts = (dto: FindProductsDto): Product[] => {
+  // dto.tags = []
+  // dto.tags?.push('t')
 
   return products;
 };
