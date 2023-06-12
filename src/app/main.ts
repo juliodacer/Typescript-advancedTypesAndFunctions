@@ -3,9 +3,6 @@ import { addProduct, products } from './products/product.service';
 
 for (let i = 0; i < 50; i++) {
   addProduct({
-    id: faker.string.uuid(),
-    createdAt: faker.date.recent(),
-    updatedAt: faker.date.recent(),
     title: faker.commerce.productName(),
     image: faker.image.urlLoremFlickr({ width: 128, height: 128 }),
     description: faker.commerce.productDescription(),
@@ -15,12 +12,7 @@ for (let i = 0; i < 50; i++) {
     price: parseInt(faker.commerce.price(), 10),
     isNew: faker.datatype.boolean(),
     tags: faker.helpers.arrayElements(['cat', 'dog', 'mouse']),
-    category: {
-      id: faker.string.uuid(),
-      name: faker.commerce.department(),
-      createdAt: faker.date.recent(),
-      updatedAt: faker.date.recent(),
-    },
+    categoryId: faker.string.uuid()
   });
 }
 
